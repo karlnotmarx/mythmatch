@@ -1,0 +1,43 @@
+cat > .gitignore << 'EOF'
+# Virtual environment
+M_venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Data files (too large for git)
+data/raw/*.pdf
+data/processed/*
+data/user_data/
+
+# Vector databases (too large)
+models/vector_stores/*
+models/chroma*/
+models/*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and results
+*.log
+results/*.png
+results/*.jpg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+EOF

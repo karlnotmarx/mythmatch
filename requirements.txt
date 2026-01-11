@@ -1,0 +1,35 @@
+# Core dependencies
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-openai
+langchain-chroma
+langchain-community
+langchain-text-splitters
+
+# PDF processing
+pypdf2
+pytesseract
+pdf2image
+pillow
+
+# Vector store - pin to compatible version
+chromadb>=0.4.0,<0.6.0
+
+# Data handling & analysis
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# Jupyter notebooks
+jupyter
+ipykernel
+notebook
+
+# Utilities
+tqdm

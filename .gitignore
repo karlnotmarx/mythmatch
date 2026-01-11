@@ -40,4 +40,11 @@ results/*.jpg
 .vscode/
 .idea/
 *.swp
+# Notebooks (work in progress)
+notebooks/*.ipynb
+
+# Temp files
+Untitled
+create_banner.py
+
 EOF

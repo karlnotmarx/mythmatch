@@ -1,46 +1,64 @@
-from PIL import Image, ImageDraw, ImageFont
+<div align="center">
 
-width, height = 1200, 400
-img = Image.new('RGB', (width, height), color='#000000')
-draw = ImageDraw.Draw(img)
+![MythMatch Banner](docs/banner.png)
 
-# Use Courier New for everything
-try:
-    sanskrit_font = ImageFont.truetype('/System/Library/Fonts/Courier.dfont', 60)
-    title_font = ImageFont.truetype('/System/Library/Fonts/Courier.dfont', 45)
-    subtitle_font = ImageFont.truetype('/System/Library/Fonts/Courier.dfont', 24)
-except:
-    sanskrit_font = ImageFont.load_default()
-    title_font = ImageFont.load_default()
-    subtitle_font = ImageFont.load_default()
+### *Mythakam Jñānam Ātmajñānam*  
+"Myth is Knowledge, Knowledge is Self"
 
-# Sanskrit text (white, Courier New)
-sanskrit_text = "मिथकम् ज्ञानम् आत्मज्ञानम्"
-bbox = draw.textbbox((0, 0), sanskrit_text, font=sanskrit_font)
-text_width = bbox[2] - bbox[0]
-x = (width - text_width) // 2
-draw.text((x, 120), sanskrit_text, fill='#FFFFFF', font=sanskrit_font)
+---
 
-# Title (white, Courier New)
-title = "MYTHMATCH"
-bbox = draw.textbbox((0, 0), title, font=title_font)
-text_width = bbox[2] - bbox[0]
-x = (width - text_width) // 2
-draw.text((x, 50), title, fill='#FFFFFF', font=title_font)
+**MythMatch** uses AI to match you with myths and archetypal characters from world mythology based on your personality and psychology.
 
-# Subtitle (light gray, Courier New)
-subtitle = '"Myth is Knowledge, Knowledge is Self"'
-bbox = draw.textbbox((0, 0), subtitle, font=subtitle_font)
-text_width = bbox[2] - bbox[0]
-x = (width - text_width) // 2
-draw.text((x, 230), subtitle, fill='#CCCCCC', font=subtitle_font)
+Answer questions about yourself, and discover the myths that mirror your journey.
 
-# Description (gray, Courier New)
-desc = "AI-Powered Personality Matching with World Mythology"
-bbox = draw.textbbox((0, 0), desc, font=subtitle_font)
-text_width = bbox[2] - bbox[0]
-x = (width - text_width) // 2
-draw.text((x, 280), desc, fill='#888888', font=subtitle_font)
+---
 
-img.save('/banner.png')
-print("Banner created with Courier New font")
+## What is MythMatch?
+
+A personality-based mythology matching system that connects you with stories from across cultures—Greek, Norse, Egyptian, Hindu, Celtic, and more.
+
+Powered by GPT-4 and a 21-volume encyclopedia of world mythology.
+
+---
+
+## Project Status
+
+**Phase 1: Data Extraction** — In Progress  
+Digitizing and extracting content from mythology encyclopedia.
+
+**Phase 2: Myth Profiling** — Planned  
+Creating psychological profiles for mythological characters and stories.
+
+**Phase 3: Matching System** — Planned  
+Building the personality-to-myth matching algorithm.
+
+---
+
+## Tech Stack
+
+Python 3.8+ • GPT-4 • LangChain • ChromaDB • RAG
+
+---
+
+## Installation
+```bash
+git clone https://github.com/yourusername/mythmatch.git
+cd mythmatch
+python3 -m venv M_venv
+source M_venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+## License
+
+MIT
+
+---
+
+*यथा पिण्डे तथा ब्रह्माण्डे*  
+**Yathā Piṇḍe Tathā Brahmāṇḍe**  
+"As is the individual, so is the universe"
+
+</div>
